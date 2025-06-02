@@ -16,6 +16,7 @@ body {
 /* Put a selector here to select div elements (see index.html). */
 div {
   text-align: center;
+
   font-family: cursive;
   padding: 8px;
   width: 120px;
