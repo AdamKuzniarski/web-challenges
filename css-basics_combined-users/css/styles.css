@@ -46,24 +46,40 @@ li {
   background-color: white;
 }
 
+aside .user {
+  max-width: 250px;
+  padding: 12px;
+  border-radius: 4px;
+}
+
 .name {
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
   margin: 0;
 }
 
 .bio {
-  font-size: 14px;
+  font-size: 12x;
   color: darkslategray;
+  margin: 6px 0;
 }
 
 .location {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
   text-align: end;
   margin: 0;
 }
 
+ul .user .bio {
+  /* border: red solid 1px; */
+  display: none;
+}
+ul .user .location {
+  /* border: green solid 1px; */
+  text-align: left;
+  color: darkslategrey;
+}
 /*
   Part 1
 
