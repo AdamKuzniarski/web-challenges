@@ -9,11 +9,14 @@
 /* Task 2: Let's work on some basic stylings that we want to apply to all elements in your code via inheritance. Which selector do we need for this? */
 
 /* Add selector */
- {
+*,
+*::after,
+*::before {
   font-family: monospace;
   font-size: 1rem;
   line-height: 1.5;
   background-color: LemonChiffon;
+  line-height: 1.2;
 }
 
 /* ------- Headings Part 1 ------- */
@@ -31,6 +34,10 @@
 */
 
 .title {
+  background: white;
+  margin-top: 0;
+  padding: 10px;
+  text-align: center;
   /* Your solution */
 }
 
@@ -45,6 +52,10 @@
 */
 
 section {
+  background: white;
+  padding: 20px;
+  margin: 10px;
+  border: orange 5px solid;
   /* Your solution */
 }
 
