@@ -39,7 +39,7 @@ h2 {
 .tech-stack__list {
   gap: 10px;
   display: flex;
-
+  flex-wrap: wrap;
   list-style: none;
   padding-left: 0;
 }
