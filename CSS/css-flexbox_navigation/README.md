@@ -10,7 +10,7 @@
   - [ ] The links should be spaced horizontally, as far apart as possible.
   - [ ] The first link should align to the start, and the last link should align to the end.
 
-## Notes
+## Notes 
 
 - You only have to touch the `index.html` and `./css/styles.css` file.
 
