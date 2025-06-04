@@ -31,7 +31,11 @@ body {
 .fish {
   width: 20rem;
   margin: 2rem auto;
-
+  display: grid;
+  grid-template-areas:
+    "dol doE"
+    "wh wE"
+    "sh shE";
   /* Add styles to the container */
 }
 
