@@ -141,6 +141,9 @@ body {
   font-size: var(--regular-text);
   line-height: var(--regular-text-line-height);
   width: 70%;
+  grid-area: txt;
+  grid-column: 1 / span 3;
+  grid-row: 2;
 }
 
 .card-section {
@@ -166,26 +169,40 @@ body {
 .--forest {
   background-image: url("../img/forest.jpg");
   background-size: cover;
+  grid-area: for;
+  grid-column: 1 / span 5;
 }
 
 .--mountain {
   background-image: url("../img/mountain.jpg");
   background-size: cover;
+  grid-area: mou;
+  grid-column: 1/4;
+  grid-row: 2;
 }
 
 .--river {
   background-image: url("../img/river.jpg");
   background-size: cover;
+  grid-area: riv;
+  grid-column: span 6;
+  grid-row: 3;
 }
 
 .--ocean {
   background-image: url("../img/ocean.jpg");
   background-size: cover;
+  grid-area: oce;
+  grid-column: 5 / span 6;
+  grid-row: 3;
 }
 
 .--desert {
   background-image: url("../img/desert.jpg");
   background-size: cover;
+  grid-area: des;
+  grid-row: 4;
+  grid-column: 4 / span 6;
 }
 
 .card-title {
@@ -237,6 +254,66 @@ body {
 
 /* Now it's your turn! Use media queries to partially overwrite our
 CSS based on conditions such as viewport width, etc. */
+
+@media (min-width: 600px) {
+  .card-section {
+    display: grid;
+    gap: 2rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+      "for"
+      "txt"
+      "mou"
+      "riv"
+      "oce"
+      "des";
+  }
+}
+@media (min-width: 900px) {
+  .card-section {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+      "for txt"
+      "mou riv"
+      "oce des";
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .--forest {
+    grid-column: 1 / -1;
+  }
+
+  .intro-text {
+    grid-column: 1 / 3;
+  }
+
+  .--mountain {
+    grid-column: 3 / 5;
+  }
+
+  .--river {
+    grid-column: 1 / 3;
+  }
+
+  .--ocean {
+    grid-column: 3 / 5;
+  }
+
+  .--desert {
+    grid-column: 2 / 4;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+}
 
 /* Media Query Tablet */
 /* --- */
