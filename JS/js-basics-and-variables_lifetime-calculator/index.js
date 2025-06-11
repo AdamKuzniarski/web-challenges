@@ -37,5 +37,5 @@ console.log(`You have only ${estimatedNumberOfDaysRemain} days left`);
 console.log(`You spent ${daysSpendSleeping} days sleeping`); */
 
 console.log(
-  `Your age is ${age}, you're survied ${totalNumbersOfDays} days of your life, you have only ${estimatedNumberOfDaysRemain} days left, you spend ${daysSpendSleeping} days sleeping`
+  `Your age is ${age}, you're survied ${totalNumbersOfDays} days of your life, you have only ${lifeAlredyLived}% of your time to live, you spend ${daysSpendSleeping} days sleeping`
 );
