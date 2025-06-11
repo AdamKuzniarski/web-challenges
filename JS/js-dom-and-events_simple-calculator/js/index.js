@@ -83,4 +83,29 @@ increaseByOne.addEventListener("click", () => {
   operand1 = ++operand1;
   console.log(operand1);
 });
+
+increaseByFive.addEventListener("click", () => {
+  operand1 = operand1 + 5;
+  console.log(operand1);
+});
+
+decreaseByOne.addEventListener("click", () => {
+  operand1 = --operand1;
+  console.log(operand1);
+});
+
+decreaseByFive.addEventListener("click", () => {
+  operand1 = operand1 - 5;
+  console.log(operand1);
+});
+
+multiplyByTwo.addEventListener("click", () => {
+  operand1 = operand1 * 2;
+  console.log(operand1);
+});
+
+divideByTwo.addEventListener("click", () => {
+  operand1 = operand1 / 2;
+  console.log(operand1);
+});
 // --^-- write your code here --^--
