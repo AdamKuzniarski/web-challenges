@@ -10,7 +10,7 @@ nextButton.addEventListener("click", () => {
 
 // 2. When clicking the "previous" button, this event listener is not executed. Do you know what's wrong with this code?
 const prevButton = document.querySelector('[data-js="prev-button"]');
-prevButton.addEventListener("prev", () => {
+prevButton.addEventListener("click", () => {
   console.log("Go to previous question");
 });
 
@@ -25,7 +25,7 @@ const secondChoiceButton = document.querySelector(
 firstChoiceButton.addEventListener("click", () => {
   firstChoiceButton.classList.add("active-choice");
   secondChoiceButton.classList.remove("active-choice");
-  console("Selected first choice");
+  console.log("Selected first choice");
 });
 
 // 4. When clicking on the second choice, the button should be shown with an active state. Do you see why it isn't working?
