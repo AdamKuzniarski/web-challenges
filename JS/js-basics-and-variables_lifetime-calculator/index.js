@@ -20,7 +20,7 @@ let age = 36;
 const dayOfYear = 365;
 const lifeSpan = 80;
 const hoursDay = 24;
-const sleepHours = 8;
+const sleepHours = 8.5;
 
 let totalNumbersOfDays = age * dayOfYear;
 const estimatedNumberOfDaysRemain = Math.round(
