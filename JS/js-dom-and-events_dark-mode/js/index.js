@@ -16,3 +16,9 @@ lightModeButton.addEventListener("click", () => {
 toggleButton.addEventListener("click", () => {
   bodyElement.classList.toggle("dark");
 });
+
+
+let temperatur = 18
+
+const forecast = temperatur >= 5 ? 'es ist warm' : 'arschkalt';
+console.log(forecast)
