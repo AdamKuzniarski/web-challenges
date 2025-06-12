@@ -1,6 +1,6 @@
 # JS DOM and Events: Dark Mode Example
 
-This challenge offers a website with three buttons that currently have no functionality. Let’s add interactivity so the user can switch between light and dark modes, depending on their current mood.
+This challenge  offers a website with three buttons that currently have no functionality. Let’s add interactivity so the user can switch between light and dark modes, depending on their current mood.
 
 ## Tasks
 
