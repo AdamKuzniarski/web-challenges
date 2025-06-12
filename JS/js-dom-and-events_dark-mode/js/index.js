@@ -10,15 +10,6 @@ if (localStorage.getItem("darkMode") === "enabled") {
   bodyElement.classList.add("dark");
 }
 
-/* darkModeButton.addEventListener("click", () => {
-  bodyElement.classList.add("dark");
-  localStorage.setItem("darkMode", "enabled");
-});
-
-lightModeButton.addEventListener("click", () => {
-  bodyElement.classList.remove("dark");
-  localStorage.setItem("darkMode", "disabled");
-}); */
 
 toggleButton.addEventListener("click", () => {
   bodyElement.classList.toggle("dark");
