@@ -23,35 +23,40 @@ console.log(firstNumber);
 
 const fruits = ["apple", "banana", "grapefruit"];
 
-fruits[0] = 'mango'
-console.log(fruits)
+fruits[0] = "mango";
+console.log(fruits);
 
 // EXERCISE 5
 // Set the value of `nestedNumber` to the fourth number in the `nestedNumbers` array using bracket notation.
 
 const nestedNumbers = [10, [20, 30, [40, 50]]];
 
-const nestedNumber = "change me";
+const nestedNumber = nestedNumbers[1][2][0];
+console.log(nestedNumber);
 
 // EXERCISE 6
 // Use the `.push()` array method to add "rat" to the end of `petsWithPush`.
 
 const petsWithPush = ["dog", "cat", "rabbit"];
 
+petsWithPush.push("rat");
+
 // EXERCISE 7
 // Use the `.pop()` method to remove the last item from `fruitsWithPop`.
 
 const fruitsWithPop = ["apple", "banana", "mango"];
-
+const restult = fruitsWithPop.pop();
+console.log(restult);
 // EXERCISE 8
 // Use the `.unshift()` array method to add "hamster" to the beginning of `unshiftedPets`.
 
 const unshiftedPets = ["dog", "cat", "rabbit"];
-
+unshiftedPets.unshift("hamster");
 // EXERCISE 9
 // Use the `.shift()` method to remove the first item from `shiftedFruits`.
 
 const shiftedFruits = ["apple", "banana", "mango"];
+shiftedFruits.shift();
 
 export {
   exampleArray,
