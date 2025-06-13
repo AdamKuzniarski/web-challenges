@@ -41,6 +41,6 @@ console.log(statement);
 // Part 5: Greeting
 const userName = "Archibald";
 
-const greeting = "Hello " + "//enter your code here" + "!";
+const greeting = "Hello " + "Coach" + "!";
 
-console.log(greeting);
+console.log(greeting === userName ? greeting : userName);
