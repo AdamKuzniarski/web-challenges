@@ -2,7 +2,7 @@
 // You can solve this exercise in the browser
 
 
-function showAnswers() {
+function showAnswers() { 
     const spans = document.querySelectorAll("span");
     spans.forEach((span) => {
       span.classList.toggle("hidden");
