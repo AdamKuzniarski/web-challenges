@@ -34,7 +34,7 @@ if (numberOfHotdogs > 1000000) {
 // Part 4: Daytime
 const currentHour = 12;
 
-const statement = "";
+const statement = currentHour < 17 ? "Still nee to learn.." : "Partytime!";
 
 console.log(statement);
 
