@@ -10,6 +10,11 @@ console.clear();
 
 // --v-- write your code here --v--
 
+const title = "The Lord of the JavaScript";
+const author = "Mario";
+let rating = 4.2;
+let sales = 120;
+logBookData();
 // --^-- write your code here --^--
 
 /*
@@ -28,17 +33,23 @@ Then:
 
 // --v-- write your code here --v--
 
+rating++;
+sales++;
+logBookData();
+
 // --^-- write your code here --^--
 
 /*
 3: The logging code above is repetitive and hard to maintain.
-   Refactor your code by doing the following:
+Refactor your code by doing the following:
 
- - Write a function called `logBookData` that logs all the book details to the console.
- - Replace the existing `console.log` statements with calls to this function.
- - Then, increase the number of sales two more times and log the updated details after each increase.
+- Write a function called `logBookData` that logs all the book details to the console.
+- Replace the existing `console.log` statements with calls to this function.
+- Then, increase the number of sales two more times and log the updated details after each increase.
 */
 
 // --v-- write your code here --v--
-
+function logBookData() {
+  console.log(title, author, rating, sales);
+}
 // --^-- write your code here --^--
