@@ -16,14 +16,23 @@
     </p>
 
     <form for="title">
+
       <fieldset>
         <legend>Enter your information</legend>
-        <label>Name:</label>
-        <input id="name-Input" type="text" />
-        <label>Age:</label>
-        <input id="age-Input" type="text" />
-        <label>Color you cannot see:</label>
-        <input id="color-Input" type="color" />
+        <label id="name-label" for="name-Input">Name:</label>
+        <input id="name-Input" aria-labelledby="name-label" aria-required="true" aria-describedby="nameHelp" type="text" />
+        <span id="nameHelp">Please add your first name</span>
+        <label for="age-Input">Age:</label>
+        <input id="age-Input" aria-labelledby="last-name-label" aria-required="true" aria-describedby="last-nameHelp" type="text" />
+        <span id="last-nameHelp">Please add your last name</span>
+        <label id="color-label" for="color-Input">Color you cannot see:</label>
+        <input 
+          id="color-Input" 
+          type="color" 
+          aria-labelledby="color-label" 
+          aria-describedby="colorHelp"
+        />
+        <span id="colorHelp">Select a color you have difficulty seeing</span>
         <textarea rows="7" placeholder="Leave us a message..."></textarea>
         <button type="submit">Submit</button>
       </fieldset>
