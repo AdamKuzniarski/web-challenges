@@ -64,6 +64,10 @@ textarea {
   color: red;
 }
 
+.hidden {
+  display: none;
+}
+
 .success {
   color: green;
 }
