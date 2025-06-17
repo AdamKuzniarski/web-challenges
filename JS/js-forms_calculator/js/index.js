@@ -22,10 +22,16 @@ function divide(a, b) {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  const dataForm = new FormData(event.target);
+  const data = Object.fromEntries(dataForm);
+
   let result;
 
   // --v-- write your code here --v--
-
+  result = add(Number(data.numberA), Number(data.numberB));
+  result = subtract(Number(data.numberA), Number(data.numberB));
+  result = multiply(Number(data.numberA), Number(data.numberB));
+  result = divide(Number(data.numberA), Number(data.numberB));
   // --^-- write your code here --^--
 
   resultOutput.textContent = result;
