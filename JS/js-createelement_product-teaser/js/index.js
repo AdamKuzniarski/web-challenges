@@ -9,3 +9,35 @@ const category3 = "Plankton Diet";
 const price = "149,99 €";
 const imageSrc = 
   "https://unsplash.com/photos/3VOTHTrE614/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjU5NTM3NTA2&force=true&w=640";
+
+const newElement = document.createElement('div')
+document.body.append(newElement)
+newElement.innerHTML += `<article class="product">
+      <section class="product__body">
+        <div class="product__text-container">
+          <h2 class="product__name">${name}</h2>
+          <ul class="product__categories">
+            <li class="product__category">${}</li>
+            <li class="product__category">Warmer waters</li>
+            <li class="product__category">Omnivorous</li>
+          </ul>
+          <p class="product__description">
+            Anemonefish are omnivorous and can feed on undigested food from
+            their host anemones. When a sea anemone is not available in an
+            aquarium, the anemonefish may settle in some varieties of soft
+            corals, or large polyp stony corals.
+          </p>
+        </div>
+        <div class="product__image-container">
+          <img
+            class="product__image"
+            src="https://unsplash.com/photos/rEM3cK8F1pk/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NHx8bmVtb3xlbnwwfHx8fDE2NTk1MjE1MzA&force=true&w=640"
+            alt=""
+          />
+        </div>
+      </section>
+      <footer class="product__footer">
+        <span class="product__price">15,99 €</span>
+        <button type="button" class="product__buy-button">Buy</button>
+      </footer>
+    </article>`
