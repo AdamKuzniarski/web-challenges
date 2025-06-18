@@ -8,6 +8,9 @@ const colors = ["#e0f7fa", "#ffe0b2", "#c8e6c9", "#ffccbc", "#d1c4e9"]; // Light
 let currentColorIndex = 0;
 
 changeColorButton.addEventListener("click", () => {
+  currentColorIndex = currentColorIndex + 1;
+
+  colorChangeCard.style.backgroundColor = colors[currentColorIndex];
   // Add your solution below
 });
 
