@@ -1,3 +1,5 @@
+
+
 console.clear();
 
 const main = document.querySelector('[data-js="main"]');
@@ -16,5 +18,11 @@ const programmingLanguages = [
 ];
 
 // --v-- write or modify code below this line --v--
+
+for (const language of programmingLanguages) {
+  const li = document.createElement("li");
+  li.textContent += language;
+  ol.append(li);
+}
 
 // --^-- write or modify code above this line --^--
