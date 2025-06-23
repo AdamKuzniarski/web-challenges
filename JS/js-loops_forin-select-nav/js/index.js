@@ -1,3 +1,5 @@
+/* const { createElement } = require("react"); */
+
 console.clear();
 
 const main = document.querySelector('[data-js="main"]');
@@ -18,10 +20,15 @@ const languages = {
 
 const select = document.createElement("select");
 select.name = "languages";
+
 main.append(select);
 
 // --v-- write or modify code below this line --v--
-
+for (const key in languages) {
+  const option = document.createElement("option");
+  option.textContent += key;
+  select.append(option);
+}
 // --^-- write or modify code above this line --^--
 
 // Part 2: Creating a Navigation Bar
@@ -38,5 +45,12 @@ main.append(navElement);
 navElement.append(ul);
 
 // --v-- write or modify code below this line --v--
-
+for (const key in nav) {
+  const li = document.createElement("li");
+  const a = document.createElement("a");
+  a.setAttribute("href", nav[key].href);
+  a.textContent += nav[key].text;
+  li.append(a);
+  ul.append(li);
+}
 // --^-- write or modify code above this line --^--
