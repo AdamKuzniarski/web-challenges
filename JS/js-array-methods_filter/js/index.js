@@ -24,14 +24,28 @@ const cards = [
   },
 ];
 
-const onlyCardWithIdTwo = null;
+const onlyCardWithIdTwo = cards.filter((card) => {
+  const idTwo = card.id.includes("2");
+  return idTwo;
+});
 
-const allCardsWith3Tags = null;
+const allCardsWith3Tags = cards.filter((card) => {
+  const tags = card.tags.length === 3;
+  return tags;
+});
 
-const allCardsThatAreNotBookmarked = null;
+const allCardsThatAreNotBookmarked = cards.filter((card) => {
+  return card.isBookmarked === true;
+});
 
-const allCardsWithTagsHTMLOrJSThatAreBookmarked = null;
+const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter(
+  (card) => card.isBookmarked === true || card.tags.length != 0
+);
 
+console.log(onlyCardWithIdTwo);
+console.log(allCardsWith3Tags);
+console.log(allCardsThatAreNotBookmarked);
+console.log(allCardsWithTagsHTMLOrJSThatAreBookmarked);
 export {
   onlyCardWithIdTwo,
   allCardsWith3Tags,
