@@ -39,7 +39,9 @@ const allCardsThatAreNotBookmarked = cards.filter((card) => {
 });
 
 const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter(
-  (card) => card.isBookmarked === true || card.tags.length != 0
+  (card) =>
+    (card.tags.includes("html") || card.tags.includes("js")) &&
+    card.isBookmarked
 );
 
 console.log(onlyCardWithIdTwo);
