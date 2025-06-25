@@ -17,8 +17,12 @@ const operations = {
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  const firstNumber = Number(event.target.firstNumber.value);
-  const secondNumber = Number(event.target.secondNumber.value);
-  const operation = event.target.operation.value;
-  output.innerText = operations[operation](firstNumber, secondNumber);
+  try {
+    const firstNumber = Number(event.target.firstNumber.value);
+    const secondNumber = Number(event.target.secondNumber.value);
+    const operation = event.target.operation.value;
+    output.innerText = operations[operation](firstNumber, secondNumber);
+  } catch  {
+    output.innerText = "Please pass a number rather than 0 as divisor";
+  }
 });
