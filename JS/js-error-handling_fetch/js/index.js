@@ -5,15 +5,15 @@ const userElement = document.querySelector("[data-js='user']");
 const errorElement = document.querySelector("[data-js='error']");
 
 async function fetchUserData(url) {
-  try {
-    const response = await fetch(url, {
-      headers: { "x-api-key": "reqres-free-v1" },
-    });
-
-    return await response.json();
-  } catch (error) {
-    return { error: error.message };
-  }
+  const response = await fetch(url, {
+    headers: { "x-api-key": "reqres-free-v1" },
+  });
+  const contentType = response.headers.get("content-type");
+  console.log(contentType);
+  /*   if (!response.ok) {
+    return { error: `HTTP Error: ${response.status}` };
+  } */
+  return await response.json();
 }
 
 const endpoints = [
@@ -29,18 +29,28 @@ endpoints.forEach((endpoint) => {
   actionsElement.append(button);
 
   button.addEventListener("click", async () => {
-    const result = await fetchUserData(endpoint.url);
+    try {
+      const result = await fetchUserData(endpoint.url);
 
-    if (result.error) {
-      errorElement.textContent = result.error;
-      userElement.innerHTML = "No user data available.";
-    } else {
-      const user = result.data;
-      userElement.innerHTML = `
+      if (result.error) {
+        if (endpoint.name === "Invalid API link") {
+          errorElement.textContent = "Ungültiger API-Link!";
+          userElement.innerHTML = "Keine Daten verfügbar.";
+        } else {
+          errorElement.textContent = result.error;
+          userElement.innerHTML = "No user data available.";
+        }
+      } else {
+        const user = result.data;
+        userElement.innerHTML = `
       <img alt="${user.first_name} ${user.last_name}" src="${user.avatar}" class="user__image"/>
       <h2>${user.first_name} ${user.last_name}</h2>
       `;
-      errorElement.textContent = "";
+        errorElement.textContent = "";
+      }
+    } catch (error) {
+      errorElement.textContent = "Ein unerwarteter Fehler ist aufgetreten";
+      userElement.textContent = 404;
     }
   });
 });
