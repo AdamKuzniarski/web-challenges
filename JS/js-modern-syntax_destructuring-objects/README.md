@@ -1,4 +1,4 @@
-# JS Modern Syntax: Destructuring Objects
+˚# JS Modern Syntax: Destructuring Objects
 
 In this challenge, you’ll practice destructuring objects in JavaScript.
 
