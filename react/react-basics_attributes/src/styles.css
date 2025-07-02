@@ -37,7 +37,7 @@ body {
   color: var(--color-foam);
   text-decoration: none;
   padding: 0.5rem;
-  border-radius: 10px;
+  border-radius: 1px;
 }
 
 .article__link:hover {
@@ -47,4 +47,14 @@ body {
 
 .article__title {
   color: var(--color-nemo);
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+input {
+  display: block;
+  margin-bottom: 20px;
 }
