@@ -5,6 +5,7 @@ import logo from "./img/logo.jpg";
 import Navigation from "./components/Navigation.jsx";
 import Link from "./components/Link.jsx";
 import "./styles.css";
+import Button from "./components/Button.jsx";
 
 export default function App() {
   return (
@@ -24,13 +25,13 @@ export default function App() {
             Impressum
           </Link>
         </Navigation>
-        <button
+        <Button
           type="button"
-          onClick={() => console.log("I could toggle a profile!")}
+          onClick={clickElement}
           aria-label="toggle profile"
         >
           <Image className="round-image" src={avatar} alt="avatar" />
-        </button>
+        </Button>
       </Header>
       <main>content goes here…</main>
     </>
