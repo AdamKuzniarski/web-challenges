@@ -1,11 +1,13 @@
+import { useState } from "react";
 import "./styles.css";
 
 export default function App() {
-  let code = "?";
+  const [code, setEmoji] = useState("");
 
   const validCode = "🐡🐠🐋";
 
   function handleClick(emoji) {
+    setEmoji(code);
     console.log(emoji);
     console.log(code);
   }
@@ -16,7 +18,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            handleClick("🐡");
+            handleClick("🐡" + {code});
           }}
         >
           <span role="img" aria-label="Pufferfish">
@@ -26,7 +28,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            handleClick("🐋");
+            handleClick("🐋"+{code});
           }}
         >
           <span role="img" aria-label="Whale">
@@ -36,7 +38,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            handleClick("🐠");
+            handleClick("🐠" +{code});
           }}
         >
           <span role="img" aria-label="Clownfish">
