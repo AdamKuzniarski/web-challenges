@@ -2,34 +2,41 @@ import "./styles.css";
 
 import avatar from "./img/avatar.jpg";
 import logo from "./img/logo.jpg";
-
+import Header from "./components/Header.jsx";
+import Navigation from "./components/Nav.jsx";
+import Link from "./components/Link.jsx";
+import Image from "./components/Image.jsx";
+import Button from "./components/Button.jsx";
 export default function App() {
+  
+  function clickHandle(){
+    console.log('Greeting from App!')
+  }
   return (
     <>
-      <header className="header">
-        <a href="#">
+     <Header>
+      <a href="#">
           <img className="round-image" src={logo} alt="logo" />
         </a>
-        <nav>
-          <a className="navigation__link" href="#home">
+        <Navigation>
+          <Link className="navigation__link" href="#home">
             Home
-          </a>
-          <a className="navigation__link" href="#about">
+          </Link>
+          <Link className="navigation__link" href="#about">
             About
-          </a>
-          <a className="navigation__link" href="#impressum">
+          </Link>
+          <Link className="navigation__link" href="#impressum">
             Impressum
-          </a>
-        </nav>
-        <button
-          type="button"
-          onClick={() => console.log("I could toggle a profile!")}
-          aria-label="toggle profile"
+          </Link>
+        </Navigation>
+        <Button handleClick={clickHandle} aria-label="toggle profile"
         >
-          <img className="round-image" src={avatar} alt="avatar" />
-        </button>
-      </header>
+          <Image className="round-image" src={avatar} alt="avatar" />
+        </Button>
+     </Header>
       <main>content goes here…</main>
     </>
   );
 }
+
+
