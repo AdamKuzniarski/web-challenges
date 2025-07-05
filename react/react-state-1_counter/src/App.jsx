@@ -1,29 +1,30 @@
+import { useState } from "react";
 import "./styles.css";
 
 export default function App() {
-  let count = 0;
+  const [countVar, setCounter] = useState(0);
+
+  function increase() {
+    setCounter(countVar + 1);
+  }
+
+  function decrease() {
+    setCounter(countVar - 1);
+  }
 
   return (
     <div className="container">
-      <h1>{count}</h1>
+      <h1>{countVar}</h1>
       <div className="button-container">
-        <button
-          type="button"
-          onClick={() => {
-            console.log("🤔");
-          }}
-        >
+        <button type="button" onClick={decrease}>
           -
         </button>
-        <button
-          type="button"
-          onClick={() => {
-            console.log("🤔");
-          }}
-        >
+        <button type="button" onClick={increase}>
           +
         </button>
       </div>
     </div>
   );
 }
+
+
