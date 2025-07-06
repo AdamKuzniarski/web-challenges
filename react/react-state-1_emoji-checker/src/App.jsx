@@ -18,7 +18,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            handleClick("🐡" + {code});
+            setEmoji("🐡" + {code});
           }}
         >
           <span role="img" aria-label="Pufferfish">
@@ -60,3 +60,5 @@ export default function App() {
     </div>
   );
 }
+
+
