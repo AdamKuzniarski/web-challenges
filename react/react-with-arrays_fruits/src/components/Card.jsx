@@ -1,5 +1,13 @@
 import "./Card.css";
-
+import { fruits } from "../App";
 export default function Card({ name }) {
-  return <p className="card">{name}</p>;
+  return  (
+    <ul>
+      {fruits.map(({ id, name, color,  }) => (
+        <li style={{background: color}} key={id}>
+          {name} 
+        </li>
+      ))}
+    </ul>
+  );
 }
