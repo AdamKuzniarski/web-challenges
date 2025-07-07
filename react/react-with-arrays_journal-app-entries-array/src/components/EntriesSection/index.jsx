@@ -5,6 +5,9 @@ import Tabs from "../Tabs";
 import Tab from "../Tab";
 import Badge from "../Badge";
 
+
+
+
 export default function EntriesSection() {
   return (
     <section className="entries-section">
