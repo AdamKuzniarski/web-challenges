@@ -1,3 +1,6 @@
 [submodule "react/react/cgn-fssd-25-1-react-state-3"]
 	path = react/react/cgn-fssd-25-1-react-state-3
 	url = https://github.com/wd-bootcamp/cgn-fssd-25-1-react-state-3.git
+[submodule "react/react/cgn-fssd-25-1-react-state-2"]
+	path = react/react/cgn-fssd-25-1-react-state-2
+	url = https://github.com/wd-bootcamp/cgn-fssd-25-1-react-state-2.git
