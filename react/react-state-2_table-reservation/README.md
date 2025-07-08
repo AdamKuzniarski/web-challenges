@@ -6,7 +6,7 @@ Take a look at the [`Counter Component`](./src/components/Counter.jsx): it conta
 
 In the `./src/App.jsx` file, there is a sentence that currently says, “You are going to reserve a table for 2 people.”. This number is hardcoded, but it should instead reflect the current people count dynamically and update with every button click.
 
-## Tasks
+## Tasks 
 
 Lift the `people` state up so that:
 
