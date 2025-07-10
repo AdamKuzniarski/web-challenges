@@ -20,7 +20,7 @@ const entries = [
     motto: "Props, Props, Props",
     notes:
       "Today I learned about React Props. Mad props to everyone who understands this!",
-  },
+  }, 
   {
     id: 998,
     date: "Feb 3, 2025",
