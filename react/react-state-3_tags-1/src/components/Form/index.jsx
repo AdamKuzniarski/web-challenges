@@ -10,9 +10,9 @@ export default function Form({ onAddTag }) {
 
     event.target.reset();
     event.target.elements.tag.focus();
-  }
+  } 
 
-  return (
+  return ( 
     <form className="form" onSubmit={handleSubmit}>
       <h2>Add a new Tag</h2>
       <div className="form__fields">

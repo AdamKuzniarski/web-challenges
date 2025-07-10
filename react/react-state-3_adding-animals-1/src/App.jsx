@@ -28,9 +28,20 @@ export default function App() {
     console.log(newAnimal);
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
+
+    onAddAnimal(data);
+
+    event.target.reset();
+    event.target.elements.name.focus();
+  }
+
   return (
     <main className="app">
-      <Form onAddAnimal={handleAddAnimal} />
+      <Form onSubmit={handleSubmit} onAddAnimal={handleAddAnimal} />
       <List animals={animals} />
     </main>
   );

@@ -11,5 +11,5 @@ export default function App() {
       <Form />
       <List tags={tags} />
     </main>
-  );
-}
+  ); 
+} 
