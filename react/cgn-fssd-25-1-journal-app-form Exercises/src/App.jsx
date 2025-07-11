@@ -55,18 +55,10 @@ function App() {
     // replace entries with updatedEntries and trigger a rerender.
     setEntries(updatedEntries);
   }
-
-  function printShape(selectedShape) {
-    console.log(selectedShape);
+  function handlePrinting(inputValue){
+    console.log(inputValue)
   }
 
-  function printAnimal(selectedAnimal) {
-    console.log(selectedAnimal);
-  }
-
-  function printPoint(inputValue) {
-    console.log(inputValue);
-  }
   return (
     <div className="app">
       <Header />
@@ -74,80 +66,14 @@ function App() {
         <EntryForm onAddEntry={handleAddEntry} />
         <EntriesSection values={entries} />
       </main>
-      <Square onClick={printShape} />
-      <Circle onClick={printShape} />
-      <Triangle onClick={printShape} />
-      <Ryba onClick={printAnimal} />
-      <Point onClick={printPoint} />
-      <Footer />
+      <Square onSquare={handlePrinting}/>
     </div>
   );
 }
 
 export default App;
 
-function Point({ onClick }) {
-  const shapeValue = "point";
-  return (
-    <button
-      type="button"
-      onClick={() => {
-        onClick(shapeValue);
-      }}
-    >
-      Point Button
-    </button>
-  );
-}
-
-function Ryba({ onClick }) {
-  const animal = "Rybka";
-  return (
-    <button
-      onClick={() => {
-        onClick(animal);
-      }}
-    >
-      RybaButton
-    </button>
-  );
-}
-
-function Triangle({ onClick }) {
-  const shape = "Triangle";
-  return (
-    <button
-      onClick={() => {
-        onClick(shape);
-      }}
-    >
-      Click Triangle
-    </button>
-  );
-}
-
-function Square({ onClick }) {
-  const shape = "Square";
-  return (
-    <button
-      onClick={() => {
-        onClick(shape);
-      }}
-    >
-      click square
-    </button>
-  );
-}
-
-function Circle({ onClick }) {
-  const shape = "Circle";
-  return (
-    <button
-      onClick={() => {
-        onClick(shape);
-      }}
-    >
-      click circle
-    </button>
-  );
+function Square({ onSquare }) {
+  const shape = "printedSquare";
+  return <button onClick={() => onSquare(shape)}>SquareButton</button>;
 }
