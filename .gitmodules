@@ -4,3 +4,6 @@
 [submodule "react/react/cgn-fssd-25-1-react-state-2"]
 	path = react/react/cgn-fssd-25-1-react-state-2
 	url = https://github.com/wd-bootcamp/cgn-fssd-25-1-react-state-2.git
+[submodule "nextJS/nextJS/roller-coaster-js-unit-testing"]
+	path = nextJS/nextJS/roller-coaster-js-unit-testing
+	url = https://github.com/wd-bootcamp/roller-coaster-js-unit-testing.git
