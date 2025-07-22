@@ -29,7 +29,7 @@ const StyledLink = styled(Link)`
 export default function Navigation({ players }) {
   const router = useRouter();
   return (
-    <Nav>
+    <Nav aria-label="Main navigation">
       <StyledLink
         href={`${players?.length > 0 ? "/game" : "/"}`}
         $path={
